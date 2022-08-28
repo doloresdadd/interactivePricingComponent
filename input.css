@@ -1,3 +1,74 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Slider */
+
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 10px;
+  background-color: hsl(224, 65%, 95%);
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+  border-radius: 5px;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 40px; /* Set a specific slider handle width */
+  height: 40px; /* Slider handle height */
+  background: url("../images/icon-slider.svg") no-repeat center;
+  background-color: hsl(174, 86%, 45%);
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0 15px 15px 0 hsl(174, 86%, 45%, 0.5);
+}
+
+.slider::-moz-range-thumb {
+  width: 40px; /* Set a specific slider handle width */
+  height: 40px; /* Slider handle height */
+  background: url("../images/icon-slider.svg") no-repeat center;
+  cursor: pointer; /* Cursor on hover */
+  background-color: hsl(174, 86%, 45%);
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0 15px 15px 0 hsl(174, 86%, 45%, 0.5);
+}
+
+input[type="range"]::-moz-range-progress {
+  background-color: hsl(174, 77%, 80%);
+  height: 10px;
+  border-radius: 5px;
+}
+
+/* Toggle */
+
+/* input:checked ~ .dot {
+  transform: translateX(100%);
+  background-color: #fff;
+} */
