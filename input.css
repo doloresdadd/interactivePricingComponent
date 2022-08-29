@@ -66,6 +66,8 @@ input[type="range"]::-moz-range-progress {
   border-radius: 5px;
 }
 
+/*Chrome*/
+
 /* Toggle */
 
 /* input:checked ~ .dot {

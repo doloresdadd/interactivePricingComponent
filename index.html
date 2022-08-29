@@ -16,6 +16,8 @@
       href="./images/favicon-32x32.png"
     />
 
+    
+
     <title>Frontend Mentor | Interactive pricing component</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -48,28 +50,21 @@
           <div class="flex-flex-col md:flex-row space-y-6 w-full">
             <div class="flex items-center justify-center">
             <p class="text-grayishBlue text-bold uppercase p-8">
-              <span id="pageviews">100K</span> Pageviews
+              <span id="pageViews">100</span>K Pageviews
             </p>
             <p class="text-grayishBlue hidden text-xs items-center p-8 md:block">
-              <span id="price" class="text-bold text-black text-3xl"
-                >$16.00</span
+              <span class="text-bold text-black text-3xl"
+                >$<span id="topPrice"">25</span>.00</span
               >
               /month
             </p>
           </div>
             <div class="pb-4 px-6">
-              <input
-                type="range"
-                min="1"
-                max="100"
-                value="50"
-                class="slider"
-                id="priceRange"
-              />
+              <input type="range" min="1" max="100" value="50" class="slider priceSlider" id="priceRange">
             </div>
             <p class="text-grayishBlue text-xl md:hidden">
-              <span id="price" class="text-bold text-black text-3xl"
-                >$16.00</span
+              <span id="bottomPrice" class="text-bold text-black text-3xl"
+                >$25.00</span
               >
               /month
             </p>
@@ -78,7 +73,7 @@
               <div class="text-grayishBlue text-xs pr-3">Monthly Billing</div>
               <div class="">
                 <label class="relative inline-block w-14 h-7 rounded-full">
-                    <input type="checkbox" class="peer opacity-0 w-0 h-0">
+                    <input type="checkbox" class="peer opacity-0 w-0 h-0" id="yearlyToggle">
                     <span class="absolute cursor-pointer top-0 left-0 right-0 bottom-0 bg-lightGrayishBlue2 rounded-full duration-300 before:content-[''] before:absolute before:w-5 before:h-5 before:bottom-1 before:left-1 before:rounded-full
                         before:bg-white before:duration-300 peer-checked:before:translate-x-7 peer-checked:bg-strongCyan"></span>
                 </label>
@@ -132,7 +127,9 @@
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by <a href="#">Bethanie Innes</a>.
     </div>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
